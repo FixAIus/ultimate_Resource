@@ -74,4 +74,24 @@ h3 { font-weight: 700; }
 
 .max-w-content { max-width: 1200px; }
 
+/* Hero specific gradient and grain */
+.hero-gradient {
+  background:
+    radial-gradient(1200px 800px at 85% -10%, rgba(178,60,240,0.20), transparent 60%),
+    radial-gradient(1000px 700px at 10% 120%, rgba(109,40,217,0.30), transparent 60%),
+    linear-gradient(160deg, #0A0E27 0%, #1A1033 35%, #3B1D5A 70%, #6B2C82 100%);
+}
+
+.grain-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 2px 2px;
+  opacity: 0.18;
+  mix-blend-mode: overlay;
+}
+
 

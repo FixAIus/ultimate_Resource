@@ -6,11 +6,10 @@ import { CheckCircle, CalendarCheck, BarChart3 } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative pt-20 pb-16">
-      <div className="pointer-events-none absolute inset-0 premium-gradient opacity-20" />
+    <section className="relative pt-24 pb-20 hero-gradient grain-overlay">
       <div className="max-w-content mx-auto container-px">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-12">
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -39,41 +38,6 @@ export function Hero() {
               <Button href="#tabs" variant="outline">Build Your Own In 5 Minutes</Button>
             </motion.div>
 
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
-              <div className="card-surface rounded-[var(--radius-md)] p-4 flex items-center gap-3">
-                <CheckCircle className="text-[var(--color-success)]" size={20} />
-                <div>
-                  <p className="text-white/70">Avg. DM-to-Call Rate</p>
-                  <p className="text-white font-semibold">32%+</p>
-                </div>
-              </div>
-              <div className="card-surface rounded-[var(--radius-md)] p-4 flex items-center gap-3">
-                <CalendarCheck className="text-[var(--color-accent)]" size={20} />
-                <div>
-                  <p className="text-white/70">Appointment Growth</p>
-                  <p className="text-white font-semibold">3.6x in 90 Days</p>
-                </div>
-              </div>
-              <div className="card-surface rounded-[var(--radius-md)] p-4 flex items-center gap-3">
-                <BarChart3 className="text-[var(--color-accent)]" size={20} />
-                <div>
-                  <p className="text-white/70">Coach Revenue Impact</p>
-                  <p className="text-white font-semibold">$50k+ Added MRR</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:col-span-5">
-            <div className="relative h-64 sm:h-80 lg:h-[420px] card-surface rounded-[var(--radius-lg)]">
-              <div className="absolute inset-0 rounded-[var(--radius-lg)] premium-gradient opacity-30" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-white/70">Premium Coach Lifestyle Visual</p>
-                  <p className="text-white/50 text-sm">(Replace with branded imagery)</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
