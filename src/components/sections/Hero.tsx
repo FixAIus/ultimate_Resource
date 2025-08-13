@@ -16,17 +16,9 @@ export function Hero() {
               transition={{ duration: 0.6 }}
               className="text-5xl sm:text-6xl md:text-7xl leading-tight"
             >
-              The Ultimate AI Appointment Setting Guide For B2B on Instagram
+              The Ultimate AI Appointment <span className="text-multicolor">Setting Guide</span> For B2B on Instagram
             </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-5 text-white/80 text-xl"
-            >
-              The definitive resource hub for high-ticket B2B coaches. Build a profile that converts,
-              publish content that books calls, and scale conversations with premium systems.
-            </motion.p>
+            {/* Subheadline removed per request */}
 
             <motion.div
               initial={{ opacity: 0 }}
@@ -35,7 +27,7 @@ export function Hero() {
               className="mt-10 flex flex-col sm:flex-row gap-4"
             >
               <Button href="#book-audit" variant="primary">Full AI Appointment Setting System DFY</Button>
-              <Button href="#tabs" variant="outline">Build Your Own In 5 Minutes</Button>
+              <Button href="#tabs" variant="secondary">Build Your Own In 5 Minutes</Button>
             </motion.div>
 
           </div>

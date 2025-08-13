@@ -82,6 +82,19 @@ h3 { font-weight: 700; }
 
 .max-w-content { max-width: 1200px; }
 
+/* Purple highlight ring for darker secondary/outline buttons */
+.purple-ring {
+  box-shadow: 0 0 0 1px rgba(91,33,182,0.6), 0 10px 24px rgba(91,33,182,0.25);
+}
+
+/* Text gradient utility for special words */
+.text-multicolor {
+  background: linear-gradient(90deg, #9D4EDD, #7C3AED, #22D3EE, #38BDF8, #FB923C, #FDBA21);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* Hero specific gradient and grain */
 .hero-gradient {
   background:
