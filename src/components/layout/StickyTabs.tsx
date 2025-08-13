@@ -8,11 +8,7 @@ import { SECTIONS } from "@/lib/constants";
 type Props = { activeId: string; onChange: (id: string) => void };
 
 export function StickyTabs({ activeId, onChange }: Props) {
-  useEffect(() => {
-    // keep focus/scroll behavior smooth when switching tabs programmatically
-    const el = document.getElementById("tabs");
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, [activeId]);
+  // Do not auto-scroll on state change; we will only change active content
 
   return (
     <div id="tabs" className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/30 border-b border-white/10">
