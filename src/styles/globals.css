@@ -36,9 +36,10 @@
 
 /* Global background with subtle premium gradient */
 html, body {
-  background: radial-gradient(1200px 800px at 70% -10%, rgba(212, 175, 55, 0.08), transparent 60%),
-    radial-gradient(900px 700px at 10% 110%, rgba(26, 29, 41, 0.7), transparent 60%),
-    var(--color-primary);
+  background:
+    radial-gradient(1200px 900px at 85% -10%, rgba(168,85,247,0.15), transparent 60%),
+    radial-gradient(1000px 800px at 10% 120%, rgba(249,115,22,0.12), transparent 60%),
+    linear-gradient(160deg, #0A0E27 0%, #1A1033 35%, #3B1D5A 70%, #6B2C82 100%);
   color: var(--color-text);
 }
 
@@ -77,9 +78,9 @@ h3 { font-weight: 700; }
 /* Hero specific gradient and grain */
 .hero-gradient {
   background:
-    radial-gradient(1200px 800px at 85% -10%, rgba(178,60,240,0.20), transparent 60%),
-    radial-gradient(1000px 700px at 10% 120%, rgba(109,40,217,0.30), transparent 60%),
-    linear-gradient(160deg, #0A0E27 0%, #1A1033 35%, #3B1D5A 70%, #6B2C82 100%);
+    radial-gradient(1400px 900px at 80% -10%, rgba(168,85,247,0.25), transparent 60%),
+    radial-gradient(1100px 800px at 10% 120%, rgba(249,115,22,0.20), transparent 60%),
+    linear-gradient(160deg, #0A0E27 0%, #27143F 30%, #542373 65%, #8C39A7 90%, #F97316 130%);
 }
 
 .grain-overlay::before {
@@ -87,11 +88,10 @@ h3 { font-weight: 700; }
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-image:
-    radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 2px 2px;
-  opacity: 0.18;
-  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 0.03 0.06 0.1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+  opacity: 0.25;
+  mix-blend-mode: soft-light;
 }
 
 
