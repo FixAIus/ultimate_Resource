@@ -14,7 +14,7 @@ type ButtonProps = PropsWithChildren<{
 }>;
 
 export function Button({ href, onClick, children, variant = "primary", className }: ButtonProps) {
-  const base = "inline-flex items-center justify-center gap-2 rounded-[var(--radius-md)] px-6 py-3 text-sm font-semibold transition-colors focus-ring";
+  const base = "inline-flex items-center justify-center gap-2 rounded-[var(--radius-md)] px-7 py-3.5 text-base font-semibold transition-colors focus-ring";
   const variants: Record<NonNullable<ButtonProps["variant"]>, string> = {
     // Orange gradient like screenshot (white text)
     primary: "text-white shadow-md bg-gradient-to-r from-[#FFB26B] to-[#F97316] hover:from-[#FFC082] hover:to-[#FB923C]",
