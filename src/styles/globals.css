@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* Design tokens */
+:root {
+  --color-primary: #0A0E27; /* Deep luxury navy */
+  --color-secondary: #1A1D29; /* Rich charcoal */
+  --color-accent: #D4AF37; /* Premium gold */
+  --color-accent-2: #E2C766; /* Gold variant */
+  --color-text: #FFFFFF; /* Clean white */
+  --color-text-muted: #E8E6E3; /* Warm gray */
+  --color-success: #10B981; /* Emerald */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-soft: 0 8px 24px rgba(0,0,0,0.25);
+  --shadow-elevated: 0 12px 36px rgba(0,0,0,0.35);
+}
+
+/* Tailwind CSS theme bridge */
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-text: var(--color-text);
+  --color-muted: var(--color-text-muted);
+  --color-success: var(--color-success);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+
+  --font-sans: var(--font-inter);
+}
+
+/* Global background with subtle premium gradient */
+html, body {
+  background: radial-gradient(1200px 800px at 70% -10%, rgba(212, 175, 55, 0.08), transparent 60%),
+    radial-gradient(900px 700px at 10% 110%, rgba(26, 29, 41, 0.7), transparent 60%),
+    var(--color-primary);
+  color: var(--color-text);
+}
+
+/* Typography scale */
+h1 { font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-weight: 700; }
+
+/* Utility classes */
+.container-px { padding-left: 1.25rem; padding-right: 1.25rem; }
+@media (min-width: 640px) { .container-px { padding-left: 1.5rem; padding-right: 1.5rem; } }
+@media (min-width: 1024px) { .container-px { padding-left: 2rem; padding-right: 2rem; } }
+
+.premium-gradient {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.22), rgba(226, 199, 102, 0.16));
+}
+
+.card-surface {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(8px);
+}
+
+.accent-ring {
+  box-shadow: 0 0 0 1px rgba(212,175,55,0.35), 0 8px 24px rgba(212,175,55,0.15);
+}
+
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212,175,55,0.35);
+}
+
+.max-w-content { max-width: 1200px; }
+
+
