@@ -16,7 +16,7 @@ export function Hero() {
               transition={{ duration: 0.6 }}
               className="text-5xl sm:text-6xl md:text-7xl leading-tight"
             >
-              The Ultimate AI Appointment <span className="text-multicolor">Setting Guide</span> For B2B on Instagram
+              The Ultimate AI Appointment Setting Guide For B2B on Instagram
             </motion.h1>
             {/* Subheadline removed per request */}
 
