@@ -10,6 +10,13 @@
   --color-text-muted: #E8E6E3; /* Warm gray */
   --color-success: #10B981; /* Emerald */
 
+  /* Jewel tones for holographic gradient */
+  --jewel-magenta: #C026D3;
+  --jewel-purple: #7C3AED;
+  --jewel-deeppurple: #4C1D95;
+  --jewel-orange: #F97316;
+  --jewel-sun: #FDBA21;
+
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -37,9 +44,9 @@
 /* Global background with subtle premium gradient */
 html, body {
   background:
-    radial-gradient(1200px 900px at 85% -10%, rgba(168,85,247,0.15), transparent 60%),
+    radial-gradient(1200px 900px at 85% -10%, rgba(124,58,237,0.18), transparent 60%),
     radial-gradient(1000px 800px at 10% 120%, rgba(249,115,22,0.12), transparent 60%),
-    linear-gradient(160deg, #0A0E27 0%, #1A1033 35%, #3B1D5A 70%, #6B2C82 100%);
+    linear-gradient(160deg, #0A0E27 0%, #1A1033 30%, #3B1D5A 65%, #5A1F78 100%);
   color: var(--color-text);
 }
 
@@ -78,9 +85,22 @@ h3 { font-weight: 700; }
 /* Hero specific gradient and grain */
 .hero-gradient {
   background:
-    radial-gradient(1400px 900px at 80% -10%, rgba(168,85,247,0.25), transparent 60%),
-    radial-gradient(1100px 800px at 10% 120%, rgba(249,115,22,0.20), transparent 60%),
-    linear-gradient(160deg, #0A0E27 0%, #27143F 30%, #542373 65%, #8C39A7 90%, #F97316 130%);
+    radial-gradient(1200px 900px at 85% -10%, rgba(124,58,237,0.35), transparent 60%),
+    radial-gradient(1200px 900px at 20% 120%, rgba(240,82,82,0.25), transparent 60%),
+    radial-gradient(900px 700px at 70% 80%, rgba(253,186,33,0.28), transparent 60%),
+    radial-gradient(1000px 800px at 0% 20%, rgba(192,38,211,0.25), transparent 60%),
+    linear-gradient(160deg, var(--jewel-deeppurple) 0%, var(--jewel-purple) 28%, #8E3AEE 42%, #C14DE2 54%, #E8575B 66%, var(--jewel-orange) 78%, var(--jewel-sun) 92%);
+}
+
+.hero-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(120% 100% at 50% 30%, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.24) 55%, rgba(0,0,0,0.35) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.0) 35%);
+  mix-blend-mode: multiply;
 }
 
 .grain-overlay::before {
