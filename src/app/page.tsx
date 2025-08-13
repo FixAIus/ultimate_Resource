@@ -1,6 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
-import { StickyTabs } from "@/components/layout/StickyTabs";
-import { Sections } from "@/components/sections/ContentSections";
+import { TabsView } from "@/components/layout/TabsView";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { BookAudit } from "@/components/sections/BookAudit";
 
@@ -9,8 +8,7 @@ export default function Home() {
     <div>
       <SiteHeader />
       <Hero />
-      <StickyTabs />
-      <Sections />
+      <TabsView />
       <BookAudit />
       <footer className="border-t border-white/10 mt-16">
         <div className="max-w-content mx-auto container-px py-8 text-white/60 text-sm">

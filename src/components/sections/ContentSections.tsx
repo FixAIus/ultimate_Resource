@@ -22,9 +22,13 @@ function SectionFrame({ id, title, children }: PropsWithChildren<{ id: string; t
   );
 }
 
-export function Sections() {
+type SectionsProps = { activeId?: string };
+
+export function Sections({ activeId }: SectionsProps) {
+  const show = (id: string) => (!activeId ? true : activeId === id);
   return (
     <div>
+      {show("setting-process") && (
       <SectionFrame id="setting-process" title="Setting Process">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
           <h3 className="font-semibold mb-2">End-to-End Flow</h3>
@@ -35,7 +39,9 @@ export function Sections() {
           <p className="text-white/80">Decision trees for replies, objections, and qualification.</p>
         </div>
       </SectionFrame>
+      )}
 
+      {show("backend-infrastructure") && (
       <SectionFrame id="backend-infrastructure" title="Backend Infrastructure">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
           <h3 className="font-semibold mb-2">CRMs, Calendars, and Webhooks</h3>
@@ -46,7 +52,9 @@ export function Sections() {
           <p className="text-white/80">Event tracking for DMs, profile clicks, and call bookings.</p>
         </div>
       </SectionFrame>
+      )}
 
+      {show("latest-ai-capabilities") && (
       <SectionFrame id="latest-ai-capabilities" title="Latest AI capabilities">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
           <h3 className="font-semibold mb-2">Generation & Summarization</h3>
@@ -57,7 +65,9 @@ export function Sections() {
           <p className="text-white/80">Score leads to focus human attention where it matters.</p>
         </div>
       </SectionFrame>
+      )}
 
+      {show("kpis") && (
       <SectionFrame id="kpis" title="KPIs">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
           <h3 className="font-semibold mb-2">Core Metrics</h3>
@@ -68,7 +78,9 @@ export function Sections() {
           <p className="text-white/80">Show rate, close rate, CAC, and ROI tracking.</p>
         </div>
       </SectionFrame>
+      )}
 
+      {show("compliancy") && (
       <SectionFrame id="compliancy" title="Compliancy">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
           <h3 className="font-semibold mb-2">Data & Consent</h3>
@@ -79,7 +91,9 @@ export function Sections() {
           <p className="text-white/80">Hand-off to humans and proper disclosures.</p>
         </div>
       </SectionFrame>
+      )}
 
+      {show("implementation") && (
       <SectionFrame id="implementation" title="Implementation">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
           <h3 className="font-semibold mb-2">Quick Start</h3>
@@ -90,7 +104,9 @@ export function Sections() {
           <p className="text-white/80">Roadmap to scale booked calls sustainably.</p>
         </div>
       </SectionFrame>
+      )}
 
+      {show("investment") && (
       <SectionFrame id="investment" title="Investment">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
           <h3 className="font-semibold mb-2">DFY vs DIY</h3>
@@ -101,6 +117,7 @@ export function Sections() {
           <p className="text-white/80">Transparent investment ranges and what’s included.</p>
         </div>
       </SectionFrame>
+      )}
     </div>
   );
 }
