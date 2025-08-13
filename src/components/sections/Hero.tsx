@@ -10,6 +10,10 @@ export function Hero() {
       <div className="max-w-content mx-auto container-px w-full">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-12 max-w-5xl">
+            <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/10 backdrop-blur border border-white/20 text-sm text-white/90 mb-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
+              <span>🚀</span>
+              <span>Scale Your Sales 100x</span>
+            </div>
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}

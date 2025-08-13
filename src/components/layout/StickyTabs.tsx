@@ -8,10 +8,9 @@ import { SECTIONS } from "@/lib/constants";
 type Props = { activeId: string; onChange: (id: string) => void };
 
 export function StickyTabs({ activeId, onChange }: Props) {
-  // Do not auto-scroll on state change; we will only change active content
-
+  // Non-sticky tabs bar per requirements
   return (
-    <div id="tabs" className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/30 border-b border-white/10">
+    <div id="tabs" className="border-b border-white/10">
       <nav className="max-w-content mx-auto container-px overflow-x-auto">
         <ul className="flex gap-2 py-3">
           {SECTIONS.map(({ id, label }) => (
