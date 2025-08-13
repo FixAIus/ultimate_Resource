@@ -10,6 +10,13 @@ function SectionFrame({ id, title, children }: PropsWithChildren<{ id: string; t
           <div className="h-px w-24 premium-gradient mt-2" />
         </div>
         <div className="grid md:grid-cols-2 gap-6">{children}</div>
+        <div className="mt-8 card-surface rounded-[var(--radius-md)] p-6">
+          <h3 className="text-xl font-semibold">Ready to get your AI appointment setting sytem?</h3>
+          <div className="mt-4 flex flex-col sm:flex-row gap-3">
+            <Button href="#book-audit" variant="primary">Full AI Appointment Setting System DFY</Button>
+            <Button href="#tabs" variant="outline">Implement on IG now</Button>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -18,100 +25,80 @@ function SectionFrame({ id, title, children }: PropsWithChildren<{ id: string; t
 export function Sections() {
   return (
     <div>
-      <SectionFrame id="overview" title="The Complete Instagram-to-Appointment System">
+      <SectionFrame id="setting-process" title="Setting Process">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">5 Pillars Framework</h3>
-          <ul className="text-white/80 list-disc pl-5 space-y-1">
-            <li>Profile that converts</li>
-            <li>Content that books calls</li>
-            <li>Personalized DM systems</li>
-            <li>Story-driven nurturing</li>
-            <li>Data-led optimization</li>
-          </ul>
+          <h3 className="font-semibold mb-2">End-to-End Flow</h3>
+          <p className="text-white/80">Inbound and outbound workflows from profile visit to booked call.</p>
         </div>
         <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Case Study Highlights</h3>
-          <p className="text-white/80">Three coaches added 30-60 qualified calls/month in 60 days.</p>
-          <Button href="#book-audit" className="mt-4">View Case Studies</Button>
+          <h3 className="font-semibold mb-2">Scripts & Branching</h3>
+          <p className="text-white/80">Decision trees for replies, objections, and qualification.</p>
         </div>
       </SectionFrame>
 
-      <SectionFrame id="profile-optimization" title="Profile Optimization">
+      <SectionFrame id="backend-infrastructure" title="Backend Infrastructure">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">High-Converting Bio Templates</h3>
-          <p className="text-white/80">Plug-and-play bios tailored for B2B coaching niches.</p>
-          <Button href="/resources/templates" variant="tertiary" className="mt-4">Download Templates</Button>
+          <h3 className="font-semibold mb-2">CRMs, Calendars, and Webhooks</h3>
+          <p className="text-white/80">Integrate your booking stack, lead routing, and notifications.</p>
         </div>
         <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Proof & Aesthetics</h3>
-          <p className="text-white/80">Strategically place social proof and create a premium aesthetic.</p>
-        </div>
-      </SectionFrame>
-
-      <SectionFrame id="content-strategy" title="Content Strategy">
-        <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Content Pillars</h3>
-          <p className="text-white/80">Authority, Demand Gen, Proof, Offer, Community.</p>
-        </div>
-        <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Carousel & Video Frameworks</h3>
-          <p className="text-white/80">Premium layouts and scripts that convert attention into calls.</p>
+          <h3 className="font-semibold mb-2">Data Layer</h3>
+          <p className="text-white/80">Event tracking for DMs, profile clicks, and call bookings.</p>
         </div>
       </SectionFrame>
 
-      <SectionFrame id="dm-automation" title="DM Automation">
+      <SectionFrame id="latest-ai-capabilities" title="Latest AI capabilities">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Personal at Scale</h3>
-          <p className="text-white/80">Hybrid workflows that keep conversations human while scaling.</p>
+          <h3 className="font-semibold mb-2">Generation & Summarization</h3>
+          <p className="text-white/80">Use AI to draft replies, summarize threads, and propose next actions.</p>
         </div>
         <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Sequences & Qualifying</h3>
-          <p className="text-white/80">Pre-built sequences and scripts for high-ticket qualification.</p>
-        </div>
-      </SectionFrame>
-
-      <SectionFrame id="story-selling" title="Story Selling">
-        <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Story Frameworks</h3>
-          <p className="text-white/80">Daily, Proof, Objection, Offer, CTA.</p>
-        </div>
-        <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Highlights That Sell</h3>
-          <p className="text-white/80">Turn highlights into an evergreen sales page.</p>
+          <h3 className="font-semibold mb-2">Prioritization</h3>
+          <p className="text-white/80">Score leads to focus human attention where it matters.</p>
         </div>
       </SectionFrame>
 
-      <SectionFrame id="live-strategies" title="Live Strategies">
+      <SectionFrame id="kpis" title="KPIs">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">High-Converting Live Formats</h3>
-          <p className="text-white/80">Training, Q&A, Audit, Panel—optimized for booking calls.</p>
+          <h3 className="font-semibold mb-2">Core Metrics</h3>
+          <p className="text-white/80">Profile CTR, DM Reply Rate, Qualified Rate, Booked Calls.</p>
         </div>
         <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Promotion & Repurposing</h3>
-          <p className="text-white/80">Plan, promote, and repurpose for maximum reach.</p>
-        </div>
-      </SectionFrame>
-
-      <SectionFrame id="analytics" title="Analytics">
-        <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Metrics that Matter</h3>
-          <p className="text-white/80">Profile click-through, DM reply rate, call booking rate, ROI.</p>
-        </div>
-        <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Reporting Toolkit</h3>
-          <p className="text-white/80">Monthly dashboards and templates for clarity and growth.</p>
+          <h3 className="font-semibold mb-2">Revenue Metrics</h3>
+          <p className="text-white/80">Show rate, close rate, CAC, and ROI tracking.</p>
         </div>
       </SectionFrame>
 
-      <SectionFrame id="implementation" title="30-Day Implementation">
+      <SectionFrame id="compliancy" title="Compliancy">
         <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Weekly Roadmap</h3>
-          <p className="text-white/80">Step-by-step tasks, checklists, and milestones.</p>
-          <Button href="/resources/checklists" className="mt-4">Get Checklists</Button>
+          <h3 className="font-semibold mb-2">Data & Consent</h3>
+          <p className="text-white/80">Respect privacy policies and platform guidelines.</p>
         </div>
         <div className="card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="font-semibold mb-2">Avoid Pitfalls</h3>
-          <p className="text-white/80">Common mistakes and how to stay consistent.</p>
+          <h3 className="font-semibold mb-2">Escalation Rules</h3>
+          <p className="text-white/80">Hand-off to humans and proper disclosures.</p>
+        </div>
+      </SectionFrame>
+
+      <SectionFrame id="implementation" title="Implementation">
+        <div className="card-surface rounded-[var(--radius-md)] p-6">
+          <h3 className="font-semibold mb-2">Quick Start</h3>
+          <p className="text-white/80">5-minute setup to get your system running.</p>
+        </div>
+        <div className="card-surface rounded-[var(--radius-md)] p-6">
+          <h3 className="font-semibold mb-2">30-Day Plan</h3>
+          <p className="text-white/80">Roadmap to scale booked calls sustainably.</p>
+        </div>
+      </SectionFrame>
+
+      <SectionFrame id="investment" title="Investment">
+        <div className="card-surface rounded-[var(--radius-md)] p-6">
+          <h3 className="font-semibold mb-2">DFY vs DIY</h3>
+          <p className="text-white/80">Compare outcomes and time-to-value for each path.</p>
+        </div>
+        <div className="card-surface rounded-[var(--radius-md)] p-6">
+          <h3 className="font-semibold mb-2">Pricing Snapshot</h3>
+          <p className="text-white/80">Transparent investment ranges and what’s included.</p>
         </div>
       </SectionFrame>
     </div>

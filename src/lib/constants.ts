@@ -1,12 +1,11 @@
 export const SECTIONS = [
-  { id: "overview", label: "Overview" },
-  { id: "profile-optimization", label: "Profile Optimization" },
-  { id: "content-strategy", label: "Content Strategy" },
-  { id: "dm-automation", label: "DM Automation" },
-  { id: "story-selling", label: "Story Selling" },
-  { id: "live-strategies", label: "Live Strategies" },
-  { id: "analytics", label: "Analytics" },
+  { id: "setting-process", label: "Setting Process" },
+  { id: "backend-infrastructure", label: "Backend Infrastructure" },
+  { id: "latest-ai-capabilities", label: "Latest AI capabilities" },
+  { id: "kpis", label: "KPIs" },
+  { id: "compliancy", label: "Compliancy" },
   { id: "implementation", label: "Implementation" },
+  { id: "investment", label: "Investment" },
 ] as const;
 
 export const CTAS = {
