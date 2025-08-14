@@ -32,7 +32,7 @@ export function Sections({ activeId }: SectionsProps) {
       {show("setting-process") && (
       <SectionFrame id="setting-process" title="">
         <div className="text-center">
-          <h2 className="text-4xl font-semibold mx-auto w-full" style={{ color: "#863AAF", opacity: 0.8 }}>
+          <h2 className="text-4xl font-semibold mx-auto w-full whitespace-nowrap tracking-tight" style={{ color: "#863AAF", opacity: 0.8 }}>
             24/7 Lead Engagement. Max results.
           </h2>
         </div>
@@ -91,7 +91,6 @@ export function Sections({ activeId }: SectionsProps) {
               <li>Ignores unserious leads</li>
               <li>No false information</li>
               <li>Best offer identification</li>
-              <li>Dynamic follow‑up messages</li>
             </ul>
           </div>
           <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8">
