@@ -4,7 +4,7 @@ import { MessageSquareMore, Target, Sparkles, PhoneCall } from "lucide-react";
 
 function SectionFrame({ id, title, children, noGrid = false, hideCta = false }: PropsWithChildren<{ id: string; title: string; noGrid?: boolean; hideCta?: boolean }>) {
   return (
-    <section id={id} className="scroll-mt-24 py-14">
+    <section id={id} className="scroll-mt-24 py-14 bg-black/20">
       <div className="max-w-content mx-auto container-px">
         <div className="mb-6">
           <h2 className="text-2xl sm:text-3xl">{title}</h2>
@@ -44,14 +44,30 @@ export function Sections({ activeId }: SectionsProps) {
         {/* Stats blocks full-width */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {[
-            { label: "Response Time", value: "3 minutes" },
-            { label: "Call Conversion Rate Increase", value: "4x" },
-            { label: "Run Time", value: "24/7" },
-            { label: "Sale Cycle Cost Reduction", value: "73%" },
+            { key: "response", label: "Response Time", value: "3" },
+            { key: "conversion", label: "Call Conversion Rate Increase", value: "4x" },
+            { key: "runtime", label: "Run Time", value: "24/7" },
+            { key: "cost", label: "Sale Cycle Cost Reduction", value: "73%" },
           ].map((s, i) => (
-            <div key={i} className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-8 text-center flex flex-col items-center justify-between" style={{ minHeight: 180 }}>
-              <div className="text-4xl md:text-5xl font-extrabold" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)", fontSize: "calc(1em + 10px)" }}>{s.value}</div>
-              <div className="text-white/80 text-base mt-2 self-stretch text-center">{s.label}</div>
+            <div
+              key={i}
+              className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-8 text-center grid grid-rows-[1fr_auto] items-center"
+              style={{ height: 220 }}
+            >
+              {s.key === "response" ? (
+                <div className="font-extrabold text-4xl md:text-5xl tracking-tight leading-none" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)" }}>
+                  <span style={{ fontSize: "calc(1em + 28px)" }}>3</span>
+                  <br />
+                  <span style={{ fontSize: "calc(1em + 25px)" }}>Min.</span>
+                </div>
+              ) : (
+                <div className="font-extrabold text-4xl md:text-5xl tracking-tight leading-none" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)", fontSize: "calc(1em + 30px)" }}>
+                  {s.value}
+                </div>
+              )}
+              <div className="text-white/80 text-base mt-2 self-stretch text-center place-self-end">
+                {s.label}
+              </div>
             </div>
           ))}
         </div>
