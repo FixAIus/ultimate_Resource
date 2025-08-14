@@ -149,6 +149,20 @@ h3 { font-weight: 700; }
   mix-blend-mode: multiply;
 }
 
+.sections-gradient {
+  background:
+    /* subtle darkening for readability */
+    linear-gradient(0deg, rgba(0,0,0,0.28), rgba(0,0,0,0.28)),
+    /* soft indigo/purple bloom top-left */
+    radial-gradient(900px 700px at 12% 8%, rgba(99,102,241,0.18), transparent 60%),
+    /* magenta/violet tint mid-right */
+    radial-gradient(1100px 800px at 82% 30%, rgba(168,85,247,0.14), transparent 60%),
+    /* deep teal accent bottom-left */
+    radial-gradient(1000px 800px at 10% 110%, rgba(13,148,136,0.12), transparent 60%),
+    /* base deep navy to purple sweep */
+    linear-gradient(160deg, #0b0f22 0%, #171233 38%, #241347 72%, #2a164f 100%);
+}
+
 .grain-overlay::before {
   content: "";
   position: absolute;

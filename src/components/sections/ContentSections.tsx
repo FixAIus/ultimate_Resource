@@ -4,7 +4,7 @@ import { MessageSquareMore, Target, Sparkles, PhoneCall } from "lucide-react";
 
 function SectionFrame({ id, title, children, noGrid = false, hideCta = false }: PropsWithChildren<{ id: string; title: string; noGrid?: boolean; hideCta?: boolean }>) {
   return (
-    <section id={id} className="scroll-mt-24 py-14 bg-black/20">
+    <section id={id} className="scroll-mt-24 py-14 bg-transparent">
       <div className="max-w-content mx-auto container-px">
         <div className="mb-6">
           <h2 className="text-2xl sm:text-3xl">{title}</h2>
@@ -30,7 +30,7 @@ type SectionsProps = { activeId?: string };
 export function Sections({ activeId }: SectionsProps) {
   const show = (id: string) => (!activeId ? true : activeId === id);
   return (
-    <div>
+    <div className="sections-gradient">
       {show("overview") && (
       <SectionFrame id="overview" title="" noGrid hideCta>
         {/* Headline & Subheadline */}
