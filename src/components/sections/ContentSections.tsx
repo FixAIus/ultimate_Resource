@@ -31,7 +31,7 @@ export function Sections({ activeId }: SectionsProps) {
     <div>
       {show("setting-process") && (
       <SectionFrame id="setting-process" title="">
-        <div className="w-full flex justify-center items-center">
+        <div className="w-full flex justify-center items-center md:col-span-2">
           <h2 className="text-4xl md:text-5xl font-semibold text-center whitespace-nowrap tracking-tight" style={{ color: "#863AAF", opacity: 0.8 }}>
             24/7 Lead Engagement. Max results.
           </h2>
