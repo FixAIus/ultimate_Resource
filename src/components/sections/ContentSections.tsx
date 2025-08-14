@@ -66,8 +66,8 @@ export function Sections({ activeId }: SectionsProps) {
                   </div>
                 )}
               </div>
-              <div className="text-white/80 text-base mt-4 self-stretch text-center place-self-end">
-                {s.label}
+              <div className="self-stretch place-self-end" style={{ display: "flex", justifyContent: "center", alignItems: "flex-end", minHeight: 56, paddingTop: 12 }}>
+                <p className="text-white/80 text-base text-center leading-tight">{s.label}</p>
               </div>
             </div>
           ))}
