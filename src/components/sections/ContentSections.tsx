@@ -67,11 +67,11 @@ export function Sections({ activeId }: SectionsProps) {
                 )}
               </div>
               <div
-                className="self-stretch place-self-end"
+                className="self-stretch w-full"
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  alignItems: s.label === "Response Time" || s.label === "Run Time" ? "center" : "flex-end",
+                  alignItems: "flex-end",
                   minHeight: 56,
                   paddingTop: 12,
                 }}
