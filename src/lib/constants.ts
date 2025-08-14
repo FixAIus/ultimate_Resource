@@ -1,6 +1,6 @@
 export const SECTIONS = [
+  { id: "overview", label: "Overview" },
   { id: "setting-process", label: "Setting Process" },
-  { id: "backend-infrastructure", label: "Backend Infrastructure" },
   { id: "latest-ai-capabilities", label: "Latest AI capabilities" },
   { id: "kpis", label: "KPIs" },
   { id: "compliancy", label: "Compliancy" },

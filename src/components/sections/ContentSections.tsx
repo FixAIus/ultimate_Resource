@@ -29,6 +29,56 @@ export function Sections({ activeId }: SectionsProps) {
   const show = (id: string) => (!activeId ? true : activeId === id);
   return (
     <div>
+      {show("overview") && (
+      <SectionFrame id="overview" title="Overview">
+        {/* Stats blocks */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { label: "Response Time", value: "3 minutes" },
+            { label: "Call Conversion Rate Increase", value: "4x" },
+            { label: "Run Time", value: "24/7" },
+            { label: "Sale Cycle Cost Reduction", value: "73%" },
+          ].map((s, i) => (
+            <div key={i} className="panel-surface rounded-[var(--radius-md)] p-5 text-center">
+              <div className="text-3xl font-extrabold" style={{ color: "#863AAF" }}>{s.value}</div>
+              <div className="text-white/80 mt-1 text-sm">{s.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Pillars */}
+        <div className="mt-8">
+          <h3 className="text-2xl font-semibold text-center" style={{ color: "#863AAF" }}>The 2 Pillars</h3>
+          <div className="grid md:grid-cols-2 gap-6 mt-4">
+            <div className="panel-surface rounded-[var(--radius-md)] p-6">
+              <h4 className="text-xl font-semibold">Setting Process</h4>
+              <ul className="arrow-list mt-3 space-y-1 text-white/85">
+                <li>Follows proven appointment setting strategies</li>
+                <li>Personalized responses aimed at maximizing engagement</li>
+                <li>Best offer identification</li>
+                <li>Advanced Objection Handling</li>
+              </ul>
+            </div>
+            <div className="panel-surface rounded-[var(--radius-md)] p-6">
+              <h4 className="text-xl font-semibold">KPI’s</h4>
+              <ul className="arrow-list mt-3 space-y-1 text-white/85">
+                <li>Analysis of conversations</li>
+                <li>A/B testing outreach messages</li>
+                <li>Identify drop-off spots to patch up</li>
+                <li>Adjustments to setting process and personality</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Why this guide exists */}
+        <div className="panel-surface rounded-[var(--radius-md)] p-6 mt-6">
+          <h4 className="text-xl font-semibold mb-2">Why This Guide Exists</h4>
+          <p className="text-white/80">Most B2B companies are bleeding money because they're trying to scale with broken systems. They miss leads, drop follow-ups, and waste hours onboarding virtual assistants when AI can do better.</p>
+          <p className="text-white/80 mt-3">This guide contains the exact blueprints we've used to build AI appointment setting systems for online coaches, consultants, and agency owners. This is a battle-tested system that generates real revenue.</p>
+        </div>
+      </SectionFrame>
+      )}
       {show("setting-process") && (
       <SectionFrame id="setting-process" title="">
         <div className="w-full flex justify-center items-center md:col-span-2">
@@ -103,6 +153,25 @@ export function Sections({ activeId }: SectionsProps) {
               <li>Youtube resource links</li>
               <li>Community Links (Skool, Whop, Circle, etc)</li>
             </ul>
+          </div>
+        </div>
+
+        {/* Better than human-like */}
+        <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8 mt-6">
+          <h3 className="text-2xl font-semibold">Better than human-like:</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+            {[
+              "2-4 minute response times",
+              "Split messages. Not just a bunch of ramble in one message",
+              "Re-engaging follow-up messages",
+              "Thousands of simultaneous conversations",
+              "Personalities that appeal to each demographic of prospects.",
+              "Run multiple campaigns",
+            ].map((p, idx) => (
+              <div key={idx} className="card-surface rounded-[var(--radius-md)] p-4">
+                <p className="text-white/85">{p}</p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionFrame>
