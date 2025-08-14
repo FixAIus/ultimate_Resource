@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 import { Button } from "@/components/ui/Button";
 import { MessageSquareMore, Target, Sparkles, PhoneCall } from "lucide-react";
 
-function SectionFrame({ id, title, children }: PropsWithChildren<{ id: string; title: string }>) {
+function SectionFrame({ id, title, children, noGrid = false, hideCta = false }: PropsWithChildren<{ id: string; title: string; noGrid?: boolean; hideCta?: boolean }>) {
   return (
     <section id={id} className="scroll-mt-24 py-14">
       <div className="max-w-content mx-auto container-px">
@@ -10,14 +10,16 @@ function SectionFrame({ id, title, children }: PropsWithChildren<{ id: string; t
           <h2 className="text-2xl sm:text-3xl">{title}</h2>
           <div className="h-px w-24 premium-gradient mt-2" />
         </div>
-        <div className="grid md:grid-cols-2 gap-6">{children}</div>
-        <div className="mt-8 card-surface rounded-[var(--radius-md)] p-6">
-          <h3 className="text-xl font-semibold">Ready to get your AI appointment setting sytem?</h3>
-          <div className="mt-4 flex flex-col sm:flex-row gap-3">
-            <Button href="/resources/templates" variant="primary">Full AI Appointment Setting System DFY</Button>
-            <Button href="#tabs" variant="outline">Implement on IG now</Button>
+        <div className={noGrid ? "block" : "grid md:grid-cols-2 gap-6"}>{children}</div>
+        {!hideCta && (
+          <div className="mt-8 card-surface rounded-[var(--radius-md)] p-6">
+            <h3 className="text-xl font-semibold">Ready to get your AI appointment setting sytem?</h3>
+            <div className="mt-4 flex flex-col sm:flex-row gap-3">
+              <Button href="/resources/templates" variant="primary">Full AI Appointment Setting System DFY</Button>
+              <Button href="#tabs" variant="outline">Implement on IG now</Button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
@@ -30,26 +32,32 @@ export function Sections({ activeId }: SectionsProps) {
   return (
     <div>
       {show("overview") && (
-      <SectionFrame id="overview" title="Overview">
-        {/* Stats blocks */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <SectionFrame id="overview" title="" noGrid hideCta>
+        {/* Headline & Subheadline */}
+        <div className="mb-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold">Your Complete Blueprint for AI Appointment Setting Systems on Instagram</h2>
+          <p className="text-white/70 mt-2">Everything a revenue generating AI appointment setting system needs</p>
+        </div>
+
+        {/* Stats blocks full-width */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
           {[
             { label: "Response Time", value: "3 minutes" },
             { label: "Call Conversion Rate Increase", value: "4x" },
             { label: "Run Time", value: "24/7" },
             { label: "Sale Cycle Cost Reduction", value: "73%" },
           ].map((s, i) => (
-            <div key={i} className="panel-surface rounded-[var(--radius-md)] p-5 text-center">
+            <div key={i} className="panel-surface rounded-[var(--radius-md)] p-6 text-center">
               <div className="text-3xl font-extrabold" style={{ color: "#863AAF" }}>{s.value}</div>
               <div className="text-white/80 mt-1 text-sm">{s.label}</div>
             </div>
           ))}
         </div>
 
-        {/* Pillars */}
-        <div className="mt-8">
+        {/* Pillars - below blocks, side-by-side only */}
+        <div className="mt-10">
           <h3 className="text-2xl font-semibold text-center" style={{ color: "#863AAF" }}>The 2 Pillars</h3>
-          <div className="grid md:grid-cols-2 gap-6 mt-4">
+          <div className="grid md:grid-cols-2 gap-6 mt-4 w-full">
             <div className="panel-surface rounded-[var(--radius-md)] p-6">
               <h4 className="text-xl font-semibold">Setting Process</h4>
               <ul className="arrow-list mt-3 space-y-1 text-white/85">
@@ -71,8 +79,8 @@ export function Sections({ activeId }: SectionsProps) {
           </div>
         </div>
 
-        {/* Why this guide exists */}
-        <div className="panel-surface rounded-[var(--radius-md)] p-6 mt-6">
+        {/* Why this guide exists – full width */}
+        <div className="panel-surface rounded-[var(--radius-md)] p-6 mt-8 w-full">
           <h4 className="text-xl font-semibold mb-2">Why This Guide Exists</h4>
           <p className="text-white/80">Most B2B companies are bleeding money because they're trying to scale with broken systems. They miss leads, drop follow-ups, and waste hours onboarding virtual assistants when AI can do better.</p>
           <p className="text-white/80 mt-3">This guide contains the exact blueprints we've used to build AI appointment setting systems for online coaches, consultants, and agency owners. This is a battle-tested system that generates real revenue.</p>
