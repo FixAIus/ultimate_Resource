@@ -109,7 +109,7 @@ h3 { font-weight: 700; }
 .list-section-hover::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -1px; /* Offset by border width to be flush with edge */
   left: 50%;
   right: 50%;
   height: 2px;
