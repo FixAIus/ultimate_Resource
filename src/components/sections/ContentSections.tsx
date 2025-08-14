@@ -66,7 +66,16 @@ export function Sections({ activeId }: SectionsProps) {
                   </div>
                 )}
               </div>
-              <div className="self-stretch place-self-end" style={{ display: "flex", justifyContent: "center", alignItems: "flex-end", minHeight: 56, paddingTop: 12 }}>
+              <div
+                className="self-stretch place-self-end"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: s.label === "Response Time" || s.label === "Run Time" ? "center" : "flex-end",
+                  minHeight: 56,
+                  paddingTop: 12,
+                }}
+              >
                 <p className="text-white/80 text-base text-center leading-tight">{s.label}</p>
               </div>
             </div>
