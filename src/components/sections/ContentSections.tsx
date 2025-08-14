@@ -51,7 +51,7 @@ export function Sections({ activeId }: SectionsProps) {
           ].map((s, i) => (
             <div
               key={i}
-              className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-8 text-center grid grid-rows-[1fr_auto]"
+              className="panel-surface hover-glow rounded-[var(--radius-md)] p-8 text-center grid grid-rows-[1fr_auto] transition-all duration-300"
               style={{ height: 220 }}
             >
               <div className="flex items-center justify-center">

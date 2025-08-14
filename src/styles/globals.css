@@ -91,18 +91,14 @@ h3 { font-weight: 700; }
   color: #863AAF; opacity: 0.95;
 }
 
-/* Hover top-glow for cards */
-.hover-top-glow {
+/* Hover glow effect for cards */
+.hover-glow {
   position: relative;
+  transition: box-shadow 300ms ease;
 }
-.hover-top-glow::after {
-  content: "";
-  position: absolute; left: 6px; right: 6px; top: 6px; height: 2px;
-  background: #863AAF; opacity: 0; border-radius: 9999px;
-  box-shadow: 0 0 10px #863AAF;
-  transition: opacity 200ms ease;
+.hover-glow:hover {
+  box-shadow: 0 0 0 3px #863AAF, 0 4px 20px rgba(134, 58, 175, 0.5);
 }
-.hover-top-glow:hover::after { opacity: 1; }
 
 .accent-ring {
   box-shadow: 0 0 0 1px rgba(212,175,55,0.35), 0 8px 24px rgba(212,175,55,0.15);
