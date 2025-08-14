@@ -109,22 +109,27 @@ h3 { font-weight: 700; }
 .list-section-hover::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -1px; /* Offset by border width to be flush with edge */
   left: 50%;
   right: 50%;
   height: 2px;
   background: #863AAF;
-  transition: all 150ms ease-out;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
+  z-index: 1;
 }
 
 .list-section-hover:hover {
-  box-shadow: 0 0 0 4px rgba(134, 58, 175, 0.3);
+  box-shadow: 
+    0 0 0 1px #863AAF,
+    0 0 15px rgba(134, 58, 175, 0.4),
+    0 0 30px rgba(134, 58, 175, 0.2);
+  transform: translateY(-1px);
 }
 
 .list-section-hover:hover::before {
-  left: 0;
-  right: 0;
+  left: -1px; /* Extend past border */
+  right: -1px;
   opacity: 1;
 }
 
