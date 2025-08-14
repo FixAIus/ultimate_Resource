@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
 import { SECTIONS } from "@/lib/constants";
 
 export function SiteHeader() {
@@ -17,9 +16,7 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-        <div className="hidden sm:flex items-center gap-3">
-          <Button href="/resources/templates" variant="tertiary">Templates</Button>
-        </div>
+        {/* No right-side CTA buttons per spec */}
       </div>
     </header>
   );
