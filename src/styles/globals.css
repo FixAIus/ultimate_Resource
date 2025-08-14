@@ -75,9 +75,18 @@ h3 { font-weight: 700; }
 .panel-surface {
   background: radial-gradient(120% 120% at 0% 0%, rgba(255,255,255,0.06), rgba(255,255,255,0.03)),
               linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-  border: 1px solid rgba(255,255,255,0.10);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+  border: 1px solid rgba(0,0,0,0.45);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.55), 0 14px 44px rgba(0,0,0,0.45);
   backdrop-filter: blur(10px);
+}
+
+/* Arrow bullets for lists */
+.arrow-list { list-style: none; padding-left: 0; }
+.arrow-list li { position: relative; padding-left: 1.25rem; }
+.arrow-list li::before {
+  content: "→";
+  position: absolute; left: 0; top: 0.2rem;
+  color: #612CB2; opacity: 0.95;
 }
 
 .accent-ring {

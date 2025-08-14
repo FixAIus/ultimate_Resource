@@ -30,7 +30,12 @@ export function Sections({ activeId }: SectionsProps) {
   return (
     <div>
       {show("setting-process") && (
-      <SectionFrame id="setting-process" title="24/7 Lead Engagement. Max results.">
+      <SectionFrame id="setting-process" title="">
+        <div className="text-center">
+          <h2 className="text-4xl font-semibold" style={{ color: "#612CB2", opacity: 0.8 }}>
+            24/7 Lead Engagement. Max results.
+          </h2>
+        </div>
         {/* 4-step vertical process – takes full width in its own block */}
         <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8 md:col-span-2">
           <h3 className="text-3xl font-semibold">4-Step Appointment Setting Process</h3>
@@ -60,13 +65,13 @@ export function Sections({ activeId }: SectionsProps) {
                 },
               ].map((step, idx) => (
                 <li key={idx} className="group relative pl-16 transition-transform">
-                  <div className="absolute left-0 top-0 h-10 w-10 rounded-full bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center text-emerald-300 font-bold">
+                  <div className="absolute left-0 top-0 h-10 w-10 rounded-full bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center text-emerald-300 font-bold transition-all group-hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.6)] group-hover:scale-110">
                     {idx + 1}
                   </div>
-                  <h4 className="font-semibold text-white text-2xl transition-all group-hover:text-white group-hover:drop-shadow-[0_0_24px_rgba(34,197,94,0.45)] group-hover:scale-[1.04]">
+                  <h4 className="font-semibold text-white text-2xl transition-all group-hover:text-white group-hover:drop-shadow-[0_0_24px_rgba(34,197,94,0.6)] group-hover:scale-[1.06]">
                     {step.title}
                   </h4>
-                  <p className="text-white/80 text-lg mt-1 max-w-4xl">
+                  <p className="text-white/80 text-lg mt-1 max-w-4xl transition-all group-hover:drop-shadow-[0_0_18px_rgba(34,197,94,0.45)] group-hover:scale-[1.02]">
                     {step.desc}
                   </p>
                 </li>
@@ -80,7 +85,7 @@ export function Sections({ activeId }: SectionsProps) {
           <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8">
             <h3 className="text-3xl font-semibold">Intelligent Conversations</h3>
             <p className="text-white/70 text-lg mt-1">“A true workhorse employee running your DMs 24/7”</p>
-            <ul className="mt-4 grid grid-cols-1 gap-2 text-white/85 text-lg list-disc pl-5">
+            <ul className="arrow-list mt-4 grid grid-cols-1 gap-2 text-white/85 text-lg">
               <li>Personalized responses</li>
               <li>Advanced objection handling</li>
               <li>Ignores unserious leads</li>
@@ -92,7 +97,7 @@ export function Sections({ activeId }: SectionsProps) {
           <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8">
             <h3 className="text-3xl font-semibold">Conversational Routing</h3>
             <p className="text-white/70 text-lg mt-1">“Only the correct leads get pushed to a specific outcome:”</p>
-            <ul className="mt-4 grid grid-cols-1 gap-2 text-white/85 text-lg list-disc pl-5">
+            <ul className="arrow-list mt-4 grid grid-cols-1 gap-2 text-white/85 text-lg">
               <li>Service provider offers</li>
               <li>Coaching offers</li>
               <li>Partnership offers</li>
