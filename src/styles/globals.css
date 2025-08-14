@@ -123,8 +123,8 @@ h3 { font-weight: 700; }
 .list-section-hover:hover {
   box-shadow: 
     0 0 0 1px #863AAF,
-    0 0 15px rgba(134, 58, 175, 0.4),
-    0 0 30px rgba(134, 58, 175, 0.2);
+    0 0 20px rgba(134, 58, 175, 0.4),
+    0 0 35px rgba(134, 58, 175, 0.2);
   transform: translateY(-1px);
 }
 
