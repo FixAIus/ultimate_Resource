@@ -91,7 +91,7 @@ export function Sections({ activeId }: SectionsProps) {
         <div className="mt-10">
           <h3 className="text-2xl font-semibold text-center" style={{ color: "#863AAF" }}>The 2 Pillars</h3>
           <div className="grid md:grid-cols-2 gap-6 mt-4 w-full">
-            <div className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-6">
+            <div className="panel-surface list-section-hover rounded-[var(--radius-md)] p-6">
               <h4 className="text-xl font-semibold">Setting Process</h4>
               <ul className="arrow-list mt-3 space-y-1 text-white/85">
                 <li>Follows proven appointment setting strategies</li>
@@ -100,7 +100,7 @@ export function Sections({ activeId }: SectionsProps) {
                 <li>Advanced Objection Handling</li>
               </ul>
             </div>
-            <div className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-6">
+            <div className="panel-surface list-section-hover rounded-[var(--radius-md)] p-6">
               <h4 className="text-xl font-semibold">KPI’s</h4>
               <ul className="arrow-list mt-3 space-y-1 text-white/85">
                 <li>Analysis of conversations</li>
@@ -173,7 +173,7 @@ export function Sections({ activeId }: SectionsProps) {
 
         {/* Side-by-side boxes */}
         <div className="grid md:grid-cols-2 gap-6 md:col-span-2">
-          <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8">
+          <div className="panel-surface list-section-hover rounded-[var(--radius-md)] p-6 md:p-8">
             <h3 className="text-3xl font-semibold">Intelligent Conversations</h3>
             <p className="text-white/70 text-lg mt-1">“A true workhorse employee running your DMs 24/7”</p>
             <ul className="arrow-list mt-4 grid grid-cols-1 gap-2 text-white/85 text-lg">
@@ -184,7 +184,7 @@ export function Sections({ activeId }: SectionsProps) {
               <li>Best offer identification</li>
             </ul>
           </div>
-          <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8">
+          <div className="panel-surface list-section-hover rounded-[var(--radius-md)] p-6 md:p-8">
             <h3 className="text-3xl font-semibold">Conversational Routing</h3>
             <p className="text-white/70 text-lg mt-1">“Only the correct leads get pushed to a specific outcome:”</p>
             <ul className="arrow-list mt-4 grid grid-cols-1 gap-2 text-white/85 text-lg">
@@ -198,7 +198,7 @@ export function Sections({ activeId }: SectionsProps) {
         </div>
 
         {/* Better than human-like */}
-        <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8 mt-6">
+        <div className="panel-surface list-section-hover rounded-[var(--radius-md)] p-6 md:p-8 mt-6">
           <h3 className="text-2xl font-semibold">Better than human-like:</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {[

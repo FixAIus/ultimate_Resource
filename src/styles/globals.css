@@ -100,6 +100,34 @@ h3 { font-weight: 700; }
   box-shadow: 0 0 0 3px #863AAF, 0 4px 20px rgba(134, 58, 175, 0.5);
 }
 
+/* List section hover effects */
+.list-section-hover {
+  position: relative;
+  transition: all 300ms ease;
+}
+
+.list-section-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: #863AAF;
+  transition: all 150ms ease-out;
+  opacity: 0;
+}
+
+.list-section-hover:hover {
+  box-shadow: 0 0 0 4px rgba(134, 58, 175, 0.3);
+}
+
+.list-section-hover:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
 .accent-ring {
   box-shadow: 0 0 0 1px rgba(212,175,55,0.35), 0 8px 24px rgba(212,175,55,0.15);
 }
