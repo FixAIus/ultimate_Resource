@@ -71,6 +71,15 @@ h3 { font-weight: 700; }
   backdrop-filter: blur(8px);
 }
 
+/* Slightly different panel surface used to distinguish inner boxes from page bg */
+.panel-surface {
+  background: radial-gradient(120% 120% at 0% 0%, rgba(255,255,255,0.06), rgba(255,255,255,0.03)),
+              linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+  backdrop-filter: blur(10px);
+}
+
 .accent-ring {
   box-shadow: 0 0 0 1px rgba(212,175,55,0.35), 0 8px 24px rgba(212,175,55,0.15);
 }

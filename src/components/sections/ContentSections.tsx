@@ -31,69 +31,75 @@ export function Sections({ activeId }: SectionsProps) {
     <div>
       {show("setting-process") && (
       <SectionFrame id="setting-process" title="24/7 Lead Engagement. Max results.">
-        {/* 4-step vertical process */}
-        <div className="card-surface rounded-[var(--radius-md)] p-6 md:p-8">
+        {/* 4-step vertical process – takes full width in its own block */}
+        <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8">
           <h3 className="text-xl font-semibold">4-Step Appointment Setting Process</h3>
           <div className="mt-6 relative">
-            <div className="absolute left-5 top-0 bottom-0 w-px bg-white/15" aria-hidden />
+            <div className="absolute left-6 top-0 bottom-0 w-px bg-white/15" aria-hidden />
             <ol className="space-y-8">
-              <li className="relative pl-12">
-                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full bg-[#0b0b23]/50 border border-white/15 text-[#C4B5FD]">
-                  <MessageSquareMore size={18} />
-                </div>
-                <h4 className="font-semibold">Lead Engagement</h4>
-                <p className="text-white/80 text-sm mt-1">Every comment, inbound DM, and story reply enters your pipeline and is engaged in minutes.</p>
-              </li>
-              <li className="relative pl-12">
-                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full bg-[#0b0b23]/50 border border-white/15 text-[#34d399]">
-                  <Target size={18} />
-                </div>
-                <h4 className="font-semibold">Setting Focus</h4>
-                <p className="text-white/80 text-sm mt-1">The focus of the conversation is put on the prospect, making them reveal their bottlenecks.</p>
-              </li>
-              <li className="relative pl-12">
-                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full bg-[#0b0b23]/50 border border-white/15 text-[#F59E0B]">
-                  <Sparkles size={18} />
-                </div>
-                <h4 className="font-semibold">Position Alignment</h4>
-                <p className="text-white/80 text-sm mt-1">Through perspective‑changing questions, prospects are self‑inspired to fix how they attack bottleneck problems.</p>
-              </li>
-              <li className="relative pl-12">
-                <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full bg-[#0b0b23]/50 border border-white/15 text-[#FB923C]">
-                  <PhoneCall size={18} />
-                </div>
-                <h4 className="font-semibold">Call‑Pitch</h4>
-                <p className="text-white/80 text-sm mt-1">Prime‑time moments of prospect interest are captured with a QUALIFIED booked call.</p>
-              </li>
+              {[
+                {
+                  title: "Lead Engagement",
+                  desc:
+                    "Every comment, inbound DM, and story reply enters your pipeline and is engaged in minutes.",
+                },
+                {
+                  title: "Setting Focus",
+                  desc:
+                    "The focus of the conversation is put on the prospect, making them reveal their bottlenecks.",
+                },
+                {
+                  title: "Position Alignment",
+                  desc:
+                    "Through perspective‑changing questions, prospects are self‑inspired to fix how they attack bottleneck problems.",
+                },
+                {
+                  title: "Call‑Pitch",
+                  desc:
+                    "Prime‑time moments of prospect interest are captured with a QUALIFIED booked call.",
+                },
+              ].map((step, idx) => (
+                <li key={idx} className="group relative pl-16 transition-transform">
+                  <div className="absolute left-0 top-0 h-10 w-10 rounded-full bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center text-emerald-300 font-bold">
+                    {idx + 1}
+                  </div>
+                  <h4 className="font-semibold text-white transition-all group-hover:text-white group-hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.35)] group-hover:scale-[1.02]">
+                    {step.title}
+                  </h4>
+                  <p className="text-white/80 text-sm mt-1 max-w-3xl">
+                    {step.desc}
+                  </p>
+                </li>
+              ))}
             </ol>
           </div>
         </div>
 
-        {/* Intelligent Conversations box */}
-        <div className="card-surface rounded-[var(--radius-md)] p-6 md:p-8">
-          <h3 className="text-xl font-semibold">Intelligent Conversations</h3>
-          <p className="text-white/70 text-sm mt-1">“A true workhorse employee running your DMs 24/7”</p>
-          <ul className="mt-4 grid sm:grid-cols-2 gap-2 text-white/85 text-sm list-disc pl-5">
-            <li>Personalized responses</li>
-            <li>Advanced objection handling</li>
-            <li>Ignores unserious leads</li>
-            <li>No false information</li>
-            <li>Best offer identification</li>
-            <li>Dynamic follow‑up messages</li>
-          </ul>
-        </div>
-
-        {/* Conversational Routing box */}
-        <div className="card-surface rounded-[var(--radius-md)] p-6 md:p-8">
-          <h3 className="text-xl font-semibold">Conversational Routing</h3>
-          <p className="text-white/70 text-sm mt-1">“Only the correct leads get pushed to a specific outcome:”</p>
-          <ul className="mt-4 grid sm:grid-cols-2 gap-2 text-white/85 text-sm list-disc pl-5">
-            <li>Service provider offers</li>
-            <li>Coaching offers</li>
-            <li>Partnership offers</li>
-            <li>Youtube resource links</li>
-            <li>Community Links (Skool, Whop, Circle, etc)</li>
-          </ul>
+        {/* Side-by-side boxes */}
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8">
+            <h3 className="text-xl font-semibold">Intelligent Conversations</h3>
+            <p className="text-white/70 text-sm mt-1">“A true workhorse employee running your DMs 24/7”</p>
+            <ul className="mt-4 grid grid-cols-1 gap-2 text-white/85 text-sm list-disc pl-5">
+              <li>Personalized responses</li>
+              <li>Advanced objection handling</li>
+              <li>Ignores unserious leads</li>
+              <li>No false information</li>
+              <li>Best offer identification</li>
+              <li>Dynamic follow‑up messages</li>
+            </ul>
+          </div>
+          <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8">
+            <h3 className="text-xl font-semibold">Conversational Routing</h3>
+            <p className="text-white/70 text-sm mt-1">“Only the correct leads get pushed to a specific outcome:”</p>
+            <ul className="mt-4 grid grid-cols-1 gap-2 text-white/85 text-sm list-disc pl-5">
+              <li>Service provider offers</li>
+              <li>Coaching offers</li>
+              <li>Partnership offers</li>
+              <li>Youtube resource links</li>
+              <li>Community Links (Skool, Whop, Circle, etc)</li>
+            </ul>
+          </div>
         </div>
       </SectionFrame>
       )}
