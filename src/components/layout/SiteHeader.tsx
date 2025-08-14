@@ -18,7 +18,6 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="hidden sm:flex items-center gap-3">
-          <Button href="#book-audit" variant="secondary">Book Audit</Button>
           <Button href="/resources/templates" variant="tertiary">Templates</Button>
         </div>
       </div>

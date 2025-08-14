@@ -10,8 +10,8 @@ export const SECTIONS = [
 
 export const CTAS = {
   primary: {
-    label: "Book Your Instagram Audit Call",
-    href: "/#book-audit",
+    label: "Access Premium Templates",
+    href: "/resources/templates",
   },
   secondary: {
     label: "Access Premium Templates",

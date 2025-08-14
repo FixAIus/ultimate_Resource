@@ -14,7 +14,7 @@ function SectionFrame({ id, title, children }: PropsWithChildren<{ id: string; t
         <div className="mt-8 card-surface rounded-[var(--radius-md)] p-6">
           <h3 className="text-xl font-semibold">Ready to get your AI appointment setting sytem?</h3>
           <div className="mt-4 flex flex-col sm:flex-row gap-3">
-            <Button href="#book-audit" variant="primary">Full AI Appointment Setting System DFY</Button>
+            <Button href="/resources/templates" variant="primary">Full AI Appointment Setting System DFY</Button>
             <Button href="#tabs" variant="outline">Implement on IG now</Button>
           </div>
         </div>

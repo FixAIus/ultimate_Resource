@@ -49,7 +49,7 @@ src/
 ```
 
 ### Features
-- Premium hero, sticky section tabs, deep-dive sections, audit CTA
+- Premium hero, tabs navigation, deep-dive sections
 - Smooth transitions, scroll progress, micro-interactions
 - Sitemap/robots, SEO-ready metadata, WebP/AVIF images
 

@@ -30,7 +30,7 @@ export function Hero() {
               transition={{ delay: 0.2 }}
               className="mt-10 flex flex-col sm:flex-row gap-4"
             >
-              <Button href="#book-audit" variant="primary">Full AI Appointment Setting System DFY</Button>
+              <Button href="/resources/templates" variant="primary">Full AI Appointment Setting System DFY</Button>
               <Button href="#tabs" variant="secondary">Build Your Own In 5 Minutes</Button>
             </motion.div>
 
