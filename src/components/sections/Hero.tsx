@@ -10,9 +10,14 @@ export function Hero() {
       <div className="max-w-content mx-auto container-px w-full">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-12 max-w-5xl">
-            <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/10 backdrop-blur border border-white/20 text-sm text-white/90 mb-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
-              <span>🚀</span>
-              <span>Scale Your Sales 100x</span>
+            <div className="w-full flex justify-center">
+              <div
+                className="inline-flex items-center gap-3 rounded-full px-6 py-3 bg-white/10 backdrop-blur border border-white/20 text-white/90 mb-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]"
+                style={{ fontSize: "calc(1rem + 15px)", boxShadow: "0 0 5px rgba(0,0,0,0.85)", textShadow: "0 0 5px rgba(0,0,0,0.85)" }}
+              >
+                <span>🚀</span>
+                <span>Scale Your Sales 100x</span>
+              </div>
             </div>
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
