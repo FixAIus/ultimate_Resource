@@ -9,15 +9,10 @@ export function Hero() {
     <section className="relative hero-gradient grain-overlay min-h-[92vh] flex items-center pt-32 pb-24">
       <div className="max-w-content mx-auto container-px w-full">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-12 max-w-5xl">
-            <div className="w-full flex justify-center">
-              <div
-                className="inline-flex items-center gap-3 rounded-full px-6 py-3 bg-white/10 backdrop-blur border border-white/20 text-white/90 mb-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]"
-                style={{ fontSize: "calc(1rem + 15px)", boxShadow: "0 0 5px rgba(0,0,0,0.85)", textShadow: "0 0 5px rgba(0,0,0,0.85)" }}
-              >
-                <span>🚀</span>
-                <span>Scale Your Sales 100x</span>
-              </div>
+          <div className="lg:col-span-12 max-w-5xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 rounded-full px-6 py-3 bg-white/10 backdrop-blur border border-white/20 text-base text-white/90 mb-6 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06),0_0_5px_rgba(0,0,0,0.9)]" style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.06), 0 0 5px rgba(0,0,0,0.9)" }}>
+              <span>🚀</span>
+              <span>Scale Your Sales 100x</span>
             </div>
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
