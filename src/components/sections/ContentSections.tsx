@@ -35,7 +35,7 @@ export function Sections({ activeId }: SectionsProps) {
       <SectionFrame id="overview" title="" noGrid hideCta>
         {/* Headline & Subheadline */}
         <div className="mb-6 w-full flex justify-center items-center md:col-span-2 flex-col text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center whitespace-nowrap tracking-tight" style={{ color: "#863AAF", opacity: 0.8, textShadow: "0 0 5px rgba(139, 0, 0, 0.9)" }}>
+          <h2 className="text-3xl md:text-4xl font-semibold text-center whitespace-nowrap tracking-tight" style={{ color: "#863AAF", opacity: 0.8, textShadow: "0 0 5px rgba(139, 0, 0, 0.9)" }}>
             Your Complete Blueprint for AI Appointment Setting Systems on Instagram
           </h2>
           <p className="text-white/70 mt-2">Everything a revenue generating AI appointment setting system needs</p>
@@ -50,7 +50,7 @@ export function Sections({ activeId }: SectionsProps) {
             { label: "Sale Cycle Cost Reduction", value: "73%" },
           ].map((s, i) => (
             <div key={i} className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-8 text-center flex flex-col items-center justify-between" style={{ minHeight: 180 }}>
-              <div className="text-4xl md:text-5xl font-extrabold" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)", fontSize: "calc(1em + 2px)" }}>{s.value}</div>
+              <div className="text-4xl md:text-5xl font-extrabold" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)", fontSize: "calc(1em + 10px)" }}>{s.value}</div>
               <div className="text-white/80 text-base mt-2 self-stretch text-center">{s.label}</div>
             </div>
           ))}
