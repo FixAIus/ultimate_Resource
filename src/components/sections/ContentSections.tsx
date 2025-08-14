@@ -76,7 +76,12 @@ export function Sections({ activeId }: SectionsProps) {
                   paddingTop: 12,
                 }}
               >
-                <p className="text-white/80 text-base text-center leading-tight">{s.label}</p>
+                <p
+                  className="text-white/80 text-base text-center leading-tight"
+                  style={{ transform: s.key === "conversion" ? "translateY(10px)" : undefined }}
+                >
+                  {s.label}
+                </p>
               </div>
             </div>
           ))}
