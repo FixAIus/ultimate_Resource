@@ -110,7 +110,7 @@ h3 { font-weight: 700; }
 .list-section-hover::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 50%;
   right: 50%;
   height: 4px;
