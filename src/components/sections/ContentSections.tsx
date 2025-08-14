@@ -32,8 +32,8 @@ export function Sections({ activeId }: SectionsProps) {
       {show("setting-process") && (
       <SectionFrame id="setting-process" title="24/7 Lead Engagement. Max results.">
         {/* 4-step vertical process – takes full width in its own block */}
-        <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8">
-          <h3 className="text-xl font-semibold">4-Step Appointment Setting Process</h3>
+        <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8 md:col-span-2">
+          <h3 className="text-3xl font-semibold">4-Step Appointment Setting Process</h3>
           <div className="mt-6 relative">
             <div className="absolute left-6 top-0 bottom-0 w-px bg-white/15" aria-hidden />
             <ol className="space-y-8">
@@ -63,10 +63,10 @@ export function Sections({ activeId }: SectionsProps) {
                   <div className="absolute left-0 top-0 h-10 w-10 rounded-full bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center text-emerald-300 font-bold">
                     {idx + 1}
                   </div>
-                  <h4 className="font-semibold text-white transition-all group-hover:text-white group-hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.35)] group-hover:scale-[1.02]">
+                  <h4 className="font-semibold text-white text-2xl transition-all group-hover:text-white group-hover:drop-shadow-[0_0_24px_rgba(34,197,94,0.45)] group-hover:scale-[1.04]">
                     {step.title}
                   </h4>
-                  <p className="text-white/80 text-sm mt-1 max-w-3xl">
+                  <p className="text-white/80 text-lg mt-1 max-w-4xl">
                     {step.desc}
                   </p>
                 </li>
@@ -76,11 +76,11 @@ export function Sections({ activeId }: SectionsProps) {
         </div>
 
         {/* Side-by-side boxes */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 md:col-span-2">
           <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8">
-            <h3 className="text-xl font-semibold">Intelligent Conversations</h3>
-            <p className="text-white/70 text-sm mt-1">“A true workhorse employee running your DMs 24/7”</p>
-            <ul className="mt-4 grid grid-cols-1 gap-2 text-white/85 text-sm list-disc pl-5">
+            <h3 className="text-3xl font-semibold">Intelligent Conversations</h3>
+            <p className="text-white/70 text-lg mt-1">“A true workhorse employee running your DMs 24/7”</p>
+            <ul className="mt-4 grid grid-cols-1 gap-2 text-white/85 text-lg list-disc pl-5">
               <li>Personalized responses</li>
               <li>Advanced objection handling</li>
               <li>Ignores unserious leads</li>
@@ -90,9 +90,9 @@ export function Sections({ activeId }: SectionsProps) {
             </ul>
           </div>
           <div className="panel-surface rounded-[var(--radius-md)] p-6 md:p-8">
-            <h3 className="text-xl font-semibold">Conversational Routing</h3>
-            <p className="text-white/70 text-sm mt-1">“Only the correct leads get pushed to a specific outcome:”</p>
-            <ul className="mt-4 grid grid-cols-1 gap-2 text-white/85 text-sm list-disc pl-5">
+            <h3 className="text-3xl font-semibold">Conversational Routing</h3>
+            <p className="text-white/70 text-lg mt-1">“Only the correct leads get pushed to a specific outcome:”</p>
+            <ul className="mt-4 grid grid-cols-1 gap-2 text-white/85 text-lg list-disc pl-5">
               <li>Service provider offers</li>
               <li>Coaching offers</li>
               <li>Partnership offers</li>
