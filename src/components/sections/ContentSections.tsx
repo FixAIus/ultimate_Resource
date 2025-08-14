@@ -51,21 +51,22 @@ export function Sections({ activeId }: SectionsProps) {
           ].map((s, i) => (
             <div
               key={i}
-              className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-8 text-center grid grid-rows-[1fr_auto] items-center"
+              className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-8 text-center grid grid-rows-[1fr_auto]"
               style={{ height: 220 }}
             >
-              {s.key === "response" ? (
-                <div className="font-extrabold text-4xl md:text-5xl tracking-tight leading-none" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)" }}>
-                  <span style={{ fontSize: "calc(1em + 28px)" }}>3</span>
-                  <br />
-                  <span style={{ fontSize: "calc(1em + 25px)" }}>Min.</span>
-                </div>
-              ) : (
-                <div className="font-extrabold text-4xl md:text-5xl tracking-tight leading-none" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)", fontSize: "calc(1em + 30px)" }}>
-                  {s.value}
-                </div>
-              )}
-              <div className="text-white/80 text-base mt-2 self-stretch text-center place-self-end">
+              <div className="flex items-center justify-center">
+                {s.key === "response" ? (
+                  <div className="font-extrabold tracking-tight leading-none inline-flex items-baseline gap-2" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)" }}>
+                    <span className="leading-none" style={{ fontSize: "72px" }}>3</span>
+                    <span className="leading-none" style={{ fontSize: "36px", textTransform: "lowercase" }}>min</span>
+                  </div>
+                ) : (
+                  <div className="font-extrabold tracking-tight leading-none" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)", fontSize: "80px" }}>
+                    {s.value}
+                  </div>
+                )}
+              </div>
+              <div className="text-white/80 text-base mt-4 self-stretch text-center place-self-end">
                 {s.label}
               </div>
             </div>
