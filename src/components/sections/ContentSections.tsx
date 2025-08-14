@@ -47,9 +47,9 @@ export function Sections({ activeId }: SectionsProps) {
             { label: "Run Time", value: "24/7" },
             { label: "Sale Cycle Cost Reduction", value: "73%" },
           ].map((s, i) => (
-            <div key={i} className="panel-surface rounded-[var(--radius-md)] p-6 text-center">
-              <div className="text-3xl font-extrabold" style={{ color: "#863AAF" }}>{s.value}</div>
-              <div className="text-white/80 mt-1 text-sm">{s.label}</div>
+            <div key={i} className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-8 text-center">
+              <div className="text-4xl md:text-5xl font-extrabold" style={{ color: "#863AAF", textShadow: "0 0 5px rgba(134,58,175,0.8), 0 0 5px rgba(212,175,55,0.7)" }}>{s.value}</div>
+              <div className="text-white/80 mt-2 text-base">{s.label}</div>
             </div>
           ))}
         </div>
@@ -58,7 +58,7 @@ export function Sections({ activeId }: SectionsProps) {
         <div className="mt-10">
           <h3 className="text-2xl font-semibold text-center" style={{ color: "#863AAF" }}>The 2 Pillars</h3>
           <div className="grid md:grid-cols-2 gap-6 mt-4 w-full">
-            <div className="panel-surface rounded-[var(--radius-md)] p-6">
+            <div className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-6">
               <h4 className="text-xl font-semibold">Setting Process</h4>
               <ul className="arrow-list mt-3 space-y-1 text-white/85">
                 <li>Follows proven appointment setting strategies</li>
@@ -67,7 +67,7 @@ export function Sections({ activeId }: SectionsProps) {
                 <li>Advanced Objection Handling</li>
               </ul>
             </div>
-            <div className="panel-surface rounded-[var(--radius-md)] p-6">
+            <div className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-6">
               <h4 className="text-xl font-semibold">KPI’s</h4>
               <ul className="arrow-list mt-3 space-y-1 text-white/85">
                 <li>Analysis of conversations</li>
@@ -80,7 +80,7 @@ export function Sections({ activeId }: SectionsProps) {
         </div>
 
         {/* Why this guide exists – full width */}
-        <div className="panel-surface rounded-[var(--radius-md)] p-6 mt-8 w-full">
+        <div className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-6 mt-8 w-full">
           <h4 className="text-xl font-semibold mb-2">Why This Guide Exists</h4>
           <p className="text-white/80">Most B2B companies are bleeding money because they're trying to scale with broken systems. They miss leads, drop follow-ups, and waste hours onboarding virtual assistants when AI can do better.</p>
           <p className="text-white/80 mt-3">This guide contains the exact blueprints we've used to build AI appointment setting systems for online coaches, consultants, and agency owners. This is a battle-tested system that generates real revenue.</p>

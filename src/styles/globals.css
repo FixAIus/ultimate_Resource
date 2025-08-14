@@ -44,6 +44,8 @@
 /* Global background with subtle premium gradient */
 html, body {
   background:
+    /* darken overall background ~20% */
+    linear-gradient(0deg, rgba(0,0,0,0.20), rgba(0,0,0,0.20)),
     radial-gradient(1200px 900px at 85% -10%, rgba(124,58,237,0.18), transparent 60%),
     radial-gradient(1000px 800px at 10% 120%, rgba(249,115,22,0.12), transparent 60%),
     linear-gradient(160deg, #0A0E27 0%, #1A1033 30%, #3B1D5A 65%, #5A1F78 100%);
@@ -88,6 +90,19 @@ h3 { font-weight: 700; }
   position: absolute; left: 0; top: 0.2rem;
   color: #863AAF; opacity: 0.95;
 }
+
+/* Hover top-glow for cards */
+.hover-top-glow {
+  position: relative;
+}
+.hover-top-glow::after {
+  content: "";
+  position: absolute; left: 6px; right: 6px; top: 6px; height: 2px;
+  background: #863AAF; opacity: 0; border-radius: 9999px;
+  box-shadow: 0 0 10px #863AAF;
+  transition: opacity 200ms ease;
+}
+.hover-top-glow:hover::after { opacity: 1; }
 
 .accent-ring {
   box-shadow: 0 0 0 1px rgba(212,175,55,0.35), 0 8px 24px rgba(212,175,55,0.15);
