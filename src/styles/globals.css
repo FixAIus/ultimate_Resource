@@ -86,7 +86,7 @@ h3 { font-weight: 700; }
 .arrow-list li::before {
   content: "→";
   position: absolute; left: 0; top: 0.2rem;
-  color: #612CB2; opacity: 0.95;
+  color: #863AAF; opacity: 0.95;
 }
 
 .accent-ring {

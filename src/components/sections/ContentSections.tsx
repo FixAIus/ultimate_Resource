@@ -32,7 +32,7 @@ export function Sections({ activeId }: SectionsProps) {
       {show("setting-process") && (
       <SectionFrame id="setting-process" title="">
         <div className="text-center">
-          <h2 className="text-4xl font-semibold" style={{ color: "#612CB2", opacity: 0.8 }}>
+          <h2 className="text-4xl font-semibold mx-auto w-full" style={{ color: "#863AAF", opacity: 0.8 }}>
             24/7 Lead Engagement. Max results.
           </h2>
         </div>
