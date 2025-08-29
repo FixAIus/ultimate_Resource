@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { CheckCircle, CalendarCheck, BarChart3 } from "lucide-react";
 
 export function Hero() {
   return (

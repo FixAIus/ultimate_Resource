@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 import { Button } from "@/components/ui/Button";
-import { MessageSquareMore, Target, Sparkles, PhoneCall, Funnel, User, Heart, MessageCircle, Phone, Smartphone, Users, Bot, XCircle, CheckCircle } from "lucide-react";
+import { MessageSquareMore, Sparkles, PhoneCall, Funnel, User, Heart, MessageCircle, Phone, Smartphone, Users, Bot, XCircle, CheckCircle } from "lucide-react";
 import { KPIStackedCards } from "@/components/ui/kpi-stacked-cards";
 
 function SectionFrame({ id, title, children, noGrid = false, hideCta = false }: PropsWithChildren<{ id: string; title: string; noGrid?: boolean; hideCta?: boolean }>) {
@@ -107,7 +107,7 @@ export function Sections({ activeId }: SectionsProps) {
               </ul>
             </div>
             <div className="panel-surface list-section-hover rounded-[var(--radius-md)] p-6">
-              <h4 className="text-xl font-semibold" style={{ fontSize: "calc(1.25rem + 4px)" }}>KPI's</h4>
+              <h4 className="text-xl font-semibold" style={{ fontSize: "calc(1.25rem + 4px)" }}>KPI&#39;s</h4>
               <ul className="arrow-list mt-3 space-y-1 text-white/85" style={{ fontSize: "calc(1rem + 3px)" }}>
                 <li>Advanced conversation insights </li>
                 <li>Understand your ideal client profile like never before</li>
@@ -122,7 +122,7 @@ export function Sections({ activeId }: SectionsProps) {
         <div className="panel-surface hover-top-glow rounded-[var(--radius-md)] p-6 mt-8 w-full">
           <h4 className="text-xl font-bold mb-2" style={{ color: "#01bb7d", fontSize: "calc(1.25rem + 10px)" }}>Why This Guide Exists</h4>
           <p className="text-white" style={{ fontSize: "calc(1rem + 2px)" }}>Most B2B companies are bleeding money in their sales appointment setting process, trying to scale with broken systems.  They miss leads, drop follow-ups, and waste hours onboarding virtual assistants when AI can do better.</p>
-          <p className="text-white mt-3" style={{ fontSize: "calc(1rem + 2px)" }}>This guide contains the exact blueprints we've used to build AI appointment setting systems for online coaches, consultants, and agency owners. This is a battle-tested system that generates real revenue.</p>
+          <p className="text-white mt-3" style={{ fontSize: "calc(1rem + 2px)" }}>This guide contains the exact blueprints we&#39;ve used to build AI appointment setting systems for online coaches, consultants, and agency owners. This is a battle-tested system that generates real revenue.</p>
         </div>
 
         {/* Call-to-Action Section (removed in favor of shared CTA in SectionFrame) */}
@@ -310,7 +310,7 @@ export function Sections({ activeId }: SectionsProps) {
             <h3 className="text-3xl font-semibold" style={{ color: "#01bb7d" }}>Trust & Compliancy</h3>
             <p className="text-white text-lg mb-4 font-medium">Meta has strict rules, we adhere to them strategically.</p>
             <ul className="arrow-list mt-4 grid grid-cols-1 gap-2 text-white/85 text-lg">
-              <li>Adhere to Meta's 24 hour automated message rule</li>
+              <li>Adhere to Meta&#39;s 24 hour automated message rule</li>
               <li>No spam detected with randomly alternating outreach messages</li>
               <li>Brand tone and voice protected in every interaction</li>
             </ul>
@@ -564,7 +564,7 @@ export function Sections({ activeId }: SectionsProps) {
           <h2 className="text-4xl md:text-5xl font-semibold text-center whitespace-nowrap tracking-tight" style={{ color: "#863AAF", opacity: 0.8, textShadow: "0 0 5px rgba(139, 0, 0, 0.9)", fontSize: "calc(2.25rem + 30px)" }}>
             Your Implementation Roadmap
           </h2>
-          <p className="text-white mt-2" style={{ fontSize: "calc(1rem + 5px)" }}>From zero to a fully automated appointment setting infrastructure. Here's how we do it.</p>
+          <p className="text-white mt-2" style={{ fontSize: "calc(1rem + 5px)" }}>From zero to a fully automated appointment setting infrastructure. Here&#39;s how we do it.</p>
         </div>
 
         {/* Sub-Section 1: Milestone Steps */}
