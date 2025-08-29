@@ -1,11 +1,8 @@
 export const SECTIONS = [
   { id: "overview", label: "Overview" },
   { id: "setting-process", label: "Setting Process" },
-  { id: "latest-ai-capabilities", label: "Latest AI capabilities" },
   { id: "kpis", label: "KPIs" },
-  { id: "compliancy", label: "Compliancy" },
   { id: "implementation", label: "Implementation" },
-  { id: "investment", label: "Investment" },
 ] as const;
 
 export const CTAS = {

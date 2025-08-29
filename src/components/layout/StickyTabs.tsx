@@ -12,7 +12,7 @@ export function StickyTabs({ activeId, onChange }: Props) {
   return (
     <div id="tabs" className="border-b border-white/10">
       <nav className="max-w-content mx-auto container-px overflow-x-auto">
-        <ul className="flex gap-2 py-3">
+        <ul className="flex gap-[13px] py-3">
           {SECTIONS.map(({ id, label }) => (
             <li key={id}>
               <a
@@ -22,7 +22,7 @@ export function StickyTabs({ activeId, onChange }: Props) {
                   onChange(id);
                 }}
                 className={cn(
-                  "relative inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm text-white/80 hover:text-white transition",
+                  "relative inline-flex items-center gap-2 rounded-full px-4 py-2 text-lg text-white/80 hover:text-white transition",
                   activeId === id && "text-black"
                 )}
               >
