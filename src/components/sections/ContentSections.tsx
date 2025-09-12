@@ -41,14 +41,14 @@ export function Sections({ activeId }: SectionsProps) {
       <SectionFrame id="overview" title="" noGrid>
         {/* Headline & Subheadline */}
         <div className="mb-6 w-full flex justify-center items-center md:col-span-2 flex-col text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center tracking-tight" style={{ color: "#863AAF", opacity: 0.8, textShadow: "0 0 5px rgba(139, 0, 0, 0.9)", fontSize: "calc(1.875rem + 22px)" }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center tracking-tight" style={{ color: "#863AAF", opacity: 0.8, textShadow: "0 0 5px rgba(139, 0, 0, 0.9)", fontSize: "clamp(1.5rem, 5vw, calc(1.875rem + 22px))" }}>
             Your Complete Blueprint for AI<br />Appointment Setting Systems on Instagram
           </h2>
           <p className="text-white mt-2" style={{ fontSize: "calc(1rem + 5px)" }}>Everything a maximum revenue generating AI appointment setting system needs</p>
         </div>
 
         {/* Stats blocks full-width */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full">
           {[
             { key: "response", label: "Response Time", value: "3" },
             { key: "conversion", label: "Call Conversion Rate Increase", value: "4x" },
@@ -57,17 +57,17 @@ export function Sections({ activeId }: SectionsProps) {
           ].map((s, i) => (
             <div
               key={i}
-              className="panel-surface hover-glow rounded-[var(--radius-md)] p-8 text-center grid grid-rows-[1fr_auto] transition-all duration-300"
-              style={{ height: 220 }}
+              className="panel-surface hover-glow rounded-[var(--radius-md)] p-4 sm:p-6 md:p-8 text-center grid grid-rows-[1fr_auto] transition-all duration-300"
+              style={{ height: 200, minHeight: 180 }}
             >
               <div className="flex items-center justify-center">
                 {s.key === "response" ? (
                   <div className="font-extrabold tracking-tight leading-none inline-flex items-baseline gap-2" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)" }}>
-                    <span className="leading-none" style={{ fontSize: "72px" }}>3</span>
-                    <span className="leading-none" style={{ fontSize: "36px", textTransform: "lowercase" }}>min</span>
+                    <span className="leading-none" style={{ fontSize: "clamp(48px, 10vw, 72px)" }}>3</span>
+                    <span className="leading-none" style={{ fontSize: "clamp(24px, 5vw, 36px)", textTransform: "lowercase" }}>min</span>
                   </div>
                 ) : (
-                  <div className="font-extrabold tracking-tight leading-none" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)", fontSize: "80px" }}>
+                  <div className="font-extrabold tracking-tight leading-none" style={{ color: "#863AAF", textShadow: "0 0 2.5px rgba(212,175,55,0.9)", fontSize: "clamp(48px, 12vw, 80px)" }}>
                     {s.value}
                   </div>
                 )}
@@ -96,7 +96,7 @@ export function Sections({ activeId }: SectionsProps) {
         {/* Pillars - below blocks, side-by-side only */}
         <div className="mt-10">
           <h3 className="text-2xl font-semibold text-left" style={{ color: "#01bb7d", fontSize: "calc(1.5rem + 10px)" }}>The 2 Pillars</h3>
-          <div className="grid md:grid-cols-2 gap-6 mt-4 w-full">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mt-4 w-full">
             <div className="panel-surface list-section-hover rounded-[var(--radius-md)] p-6">
               <h4 className="text-xl font-semibold" style={{ color: "white", fontSize: "calc(1.25rem + 8px)" }}>Setting Process</h4>
               <ul className="arrow-list mt-3 space-y-1 text-white/85" style={{ fontSize: "calc(1rem + 3px)" }}>
@@ -131,7 +131,7 @@ export function Sections({ activeId }: SectionsProps) {
       {show("setting-process") && (
       <SectionFrame id="setting-process" title="">
         <div className="w-full flex justify-center items-center md:col-span-2">
-          <h2 className="text-5xl md:text-6xl font-semibold text-center whitespace-nowrap tracking-tight" style={{ color: "#863AAF", opacity: 0.8, textShadow: "0 0 5px rgba(139, 0, 0, 0.9)" }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center tracking-tight" style={{ color: "#863AAF", opacity: 0.8, textShadow: "0 0 5px rgba(139, 0, 0, 0.9)", whiteSpace: "normal" }}>
             24/7 Lead Engagement. Max results.
           </h2>
         </div>
@@ -338,7 +338,7 @@ export function Sections({ activeId }: SectionsProps) {
       <SectionFrame id="kpis" title="" noGrid>
         {/* Main Headline & Subheadline */}
         <div className="mb-14 w-full flex justify-center items-center md:col-span-2 flex-col text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center whitespace-nowrap tracking-tight" style={{ color: "#863AAF", opacity: 0.8, textShadow: "0 0 5px rgba(139, 0, 0, 0.9)", fontSize: "calc(2.25rem + 40px)" }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center tracking-tight" style={{ color: "#863AAF", opacity: 0.8, textShadow: "0 0 5px rgba(139, 0, 0, 0.9)", fontSize: "clamp(1.5rem, 6vw, calc(2.25rem + 40px))" }}>
             Smart KPI Infrastructure
           </h2>
           <p className="text-white mt-2" style={{ fontSize: "calc(1rem + 9px)" }}>Maximum number of high-quality conversations with high-quality leads</p>
@@ -561,7 +561,7 @@ export function Sections({ activeId }: SectionsProps) {
         <SectionFrame id="implementation" title="" noGrid>
           {/* Headline & Subheadline */}
           <div className="mb-12 w-full flex justify-center items-center md:col-span-2 flex-col text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center whitespace-nowrap tracking-tight" style={{ color: "#863AAF", opacity: 0.8, textShadow: "0 0 5px rgba(139, 0, 0, 0.9)", fontSize: "calc(2.25rem + 30px)" }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center tracking-tight" style={{ color: "#863AAF", opacity: 0.8, textShadow: "0 0 5px rgba(139, 0, 0, 0.9)", fontSize: "clamp(1.5rem, 5.5vw, calc(2.25rem + 30px))" }}>
             Your Implementation Roadmap
           </h2>
           <p className="text-white mt-2" style={{ fontSize: "calc(1rem + 5px)" }}>From zero to a fully automated appointment setting infrastructure. Here&#39;s how we do it.</p>
@@ -615,8 +615,8 @@ export function Sections({ activeId }: SectionsProps) {
               { timeline: "Week 3", description: "AI Agent Deployed" },
               { timeline: "Week 7-8", description: "System Fully Operational" }
             ].map((block, idx) => (
-                                                           <div key={idx} className="panel-surface hover-glow rounded-[var(--radius-md)] p-8 text-center border" style={{ borderColor: "rgba(110,49,148,0.4)" }}>
-                 <div className="font-extrabold tracking-tight leading-none text-center" style={{ color: "#863aaf", textShadow: "0 0 2.5px rgba(134,58,175,0.9)", fontSize: "43px" }}>
+                                                           <div key={idx} className="panel-surface hover-glow rounded-[var(--radius-md)] p-4 sm:p-6 md:p-8 text-center border" style={{ borderColor: "rgba(110,49,148,0.4)" }}>
+                 <div className="font-extrabold tracking-tight leading-none text-center" style={{ color: "#863aaf", textShadow: "0 0 2.5px rgba(134,58,175,0.9)", fontSize: "clamp(32px, 8vw, 43px)" }}>
                    {block.timeline}
                  </div>
                  <div

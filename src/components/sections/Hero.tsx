@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 
 export function Hero() {
   return (
-    <section className="relative hero-gradient grain-overlay min-h-[92vh] flex items-center pt-32 pb-24">
+    <section className="relative hero-gradient grain-overlay min-h-[85vh] sm:min-h-[92vh] flex items-center pt-20 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-0">
       <div className="max-w-content mx-auto container-px w-full">
         <div className="grid lg:grid-cols-12 gap-8 items-center" style={{ marginTop: '-10px' }}>
           <div className="lg:col-span-12 max-w-5xl mx-auto text-center">
@@ -34,7 +34,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl sm:text-6xl md:text-7xl leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight"
             >
               The Ultimate AI Appointment Setting Guide For B2B on Instagram
             </motion.h1>
@@ -44,10 +44,10 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+              className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0"
             >
-              <Button href="https://api.leadconnectorhq.com/widget/bookings/fixai-strategy-consultation" variant="orange">Full AI Appointment Setting System DFY</Button>
-              <Button href="https://app.workwithfixai.com/" variant="outline">Build Your Own AI Setter</Button>
+              <Button href="https://api.leadconnectorhq.com/widget/bookings/fixai-strategy-consultation" variant="orange" className="text-sm sm:text-base md:text-lg">Full AI Appointment Setting System DFY</Button>
+              <Button href="https://app.workwithfixai.com/" variant="outline" className="text-sm sm:text-base md:text-lg">Build Your Own AI Setter</Button>
             </motion.div>
 
           </div>

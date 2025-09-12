@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   description:
     "Master Instagram appointment setting with a complete system: profile optimization, content strategy, DM automation, story selling, lives, analytics, and a 30-day implementation plan.",
   metadataBase: new URL("https://your-domain.com"),
+  viewport: "width=device-width, initial-scale=1",
   openGraph: {
     title: "Instagram Appointment Setting Mastery",
     description:

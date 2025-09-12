@@ -14,7 +14,7 @@ type ButtonProps = PropsWithChildren<{
 }>;
 
 export function Button({ href, onClick, children, variant = "primary", className }: ButtonProps) {
-  const base = "inline-flex items-center justify-center gap-2 rounded-[var(--radius-md)] px-8 py-3.5 text-lg font-semibold transition-all focus-ring";
+  const base = "inline-flex items-center justify-center gap-2 rounded-[var(--radius-md)] px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-3.5 text-sm sm:text-base md:text-lg font-semibold transition-all focus-ring";
   const variants: Record<NonNullable<ButtonProps["variant"]>, string> = {
     // Purple button with custom color
     primary: "text-white shadow-md bg-[#441670] hover:scale-105 transition-transform",

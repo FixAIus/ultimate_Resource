@@ -29,26 +29,26 @@ const KPICard = ({
   return (
     <div
       className={cn(
-        "w-[560px] cursor-pointer h-[550px] overflow-hidden bg-gray-900/95 backdrop-blur border border-gray-700/50 rounded-2xl shadow-lg",
+        "w-full max-w-[560px] cursor-pointer h-[500px] sm:h-[550px] overflow-hidden bg-gray-900/95 backdrop-blur border border-gray-700/50 rounded-2xl shadow-lg",
         isActive && "ring-2 ring-purple-400 ring-opacity-50",
         className
       )}
     >
-      <div className="p-8 h-full flex flex-col">
+        <div className="p-4 sm:p-6 md:p-8 h-full flex flex-col">
         <div className="flex items-center mb-6">
           <div className={cn("w-14 h-14 rounded-full flex items-center justify-center mr-4", data.iconBgColor)}>
             <div className={cn("w-7 h-7", data.iconColor)}>
               {data.icon}
             </div>
           </div>
-          <h4 className="text-xl font-semibold text-white" style={{ fontSize: "calc(1.25rem + 10px)" }}>{data.title}</h4>
+          <h4 className="text-lg sm:text-xl font-semibold text-white" style={{ fontSize: "clamp(1.125rem, 4vw, calc(1.25rem + 10px))" }}>{data.title}</h4>
         </div>
         
         <div className="flex-1 space-y-4">
           <div className="space-y-3">
                             <div className="flex items-start">
                   <div>
-                    <span className="font-semibold text-white text-xl">Analyze:</span>
+                    <span className="font-semibold text-white text-lg sm:text-xl">Analyze:</span>
                     {Array.isArray(data.bulletPoints.whatToAnalyze) ? (
                       <ul className="arrow-list space-y-1 text-white/85 mt-2">
                         {data.bulletPoints.whatToAnalyze.map((item, idx) => (
@@ -63,7 +63,7 @@ const KPICard = ({
                 
                 <div className="flex items-start">
                   <div>
-                    <span className="font-semibold text-white text-xl">Why:</span>
+                    <span className="font-semibold text-white text-lg sm:text-xl">Why:</span>
                     {Array.isArray(data.bulletPoints.whyImportant) ? (
                       <ul className="arrow-list space-y-1 text-white/85 mt-2">
                         {data.bulletPoints.whyImportant.map((item, idx) => (
@@ -78,7 +78,7 @@ const KPICard = ({
                 
                 <div className="flex items-start">
                   <div>
-                    <span className="font-semibold text-white text-xl">Insights Revealed:</span>
+                    <span className="font-semibold text-white text-lg sm:text-xl">Insights Revealed:</span>
                     {Array.isArray(data.bulletPoints.whatItReveals) ? (
                       <ul className="arrow-list space-y-1 text-white/85 mt-2">
                         {data.bulletPoints.whatItReveals.map((item, idx) => (
@@ -150,9 +150,9 @@ const KPIStackedCards = ({
   const queueItems = createContinuousQueue();
 
   return (
-    <div className="relative w-full h-full flex flex-col items-center py-8">
-      {/* Cards Container - Wider to show the continuous queue with headroom for glow */}
-      <div className="relative w-[1150px] h-[630px] mb-2 overflow-visible">
+    <div className="relative w-full h-full flex flex-col items-center py-4 sm:py-8">
+      {/* Cards Container - Responsive for mobile */}
+      <div className="relative w-full max-w-[1150px] h-[580px] sm:h-[630px] mb-2 overflow-visible px-4 sm:px-0">
         {queueItems.map((item) => {
           const { card, originalIndex, queuePosition, isActive } = item;
           
@@ -173,8 +173,10 @@ const KPIStackedCards = ({
           } else {
             // Queue cards - always to the left with decreasing visibility
             const distance = Math.abs(queuePosition);
-            xOffset = queuePosition * stackOffset; // Negative positions go left
-            yOffset = distance * 15; // Downward offset for depth
+            // Responsive stack offset: smaller on mobile
+            const responsiveStackOffset = typeof window !== 'undefined' && window.innerWidth < 768 ? stackOffset * 0.6 : stackOffset;
+            xOffset = queuePosition * responsiveStackOffset; // Negative positions go left
+            yOffset = distance * (typeof window !== 'undefined' && window.innerWidth < 768 ? 10 : 15); // Smaller offset on mobile
             zIndex = 15 - distance;
             scale = 1 - (distance * 0.06); // Scale reduction for depth
             opacity = 1 - (distance * 0.1); // Opacity reduction for queue effect
