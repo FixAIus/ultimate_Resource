@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { CALENDAR_URL } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 
 export function Hero() {
@@ -46,8 +47,7 @@ export function Hero() {
               transition={{ delay: 0.2 }}
               className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0"
             >
-              <Button href="https://api.leadconnectorhq.com/widget/bookings/fixai-strategy-consultation" variant="orange" className="text-sm sm:text-base md:text-lg">Full AI Appointment Setting System DFY</Button>
-              <Button href="https://app.workwithfixai.com/" variant="outline" className="text-sm sm:text-base md:text-lg">Build Your Own AI Setter</Button>
+              <Button href={CALENDAR_URL} variant="orange" className="text-sm sm:text-base md:text-lg">Full AI Appointment Setting System DFY</Button>
             </motion.div>
 
           </div>

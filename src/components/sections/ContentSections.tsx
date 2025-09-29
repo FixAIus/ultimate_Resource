@@ -1,5 +1,6 @@
 import { PropsWithChildren } from "react";
 import { Button } from "@/components/ui/Button";
+import { CALENDAR_URL } from "@/lib/constants";
 import { MessageSquareMore, Sparkles, PhoneCall, Funnel, User, Heart, MessageCircle, Phone, Smartphone, Users, Bot, XCircle, CheckCircle } from "lucide-react";
 import { KPIStackedCards } from "@/components/ui/kpi-stacked-cards";
 
@@ -20,8 +21,7 @@ function SectionFrame({ id, title, children, noGrid = false, hideCta = false }: 
             <h3 className="font-semibold tracking-tight text-white" style={{ fontSize: "calc(1.875rem + 12px)" }}>Ready To Get Your AI Appointment Setting System?</h3>
             <p className="text-white/80 mt-6" style={{ fontSize: "calc(1rem + 4px)" }}>Stop losing deals to inconsistent setter. Implement a system that scales.</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-              <Button href="https://api.leadconnectorhq.com/widget/bookings/fixai-strategy-consultation" variant="orange">Get An AI Appointment Setting System</Button>
-              <Button href="https://app.workwithfixai.com/" variant="outline">Build Your Own AI Setter</Button>
+              <Button href={CALENDAR_URL} variant="orange">Get An AI Appointment Setting System</Button>
             </div>
             <div className="mt-8 text-xs text-white/50">© 2025 Fix AI LLC</div>
           </div>
