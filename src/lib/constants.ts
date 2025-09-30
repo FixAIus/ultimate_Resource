@@ -23,6 +23,6 @@ export const CTAS = {
 
 export const CALENDAR_URL =
   process.env.NEXT_PUBLIC_CALENDAR_URL ||
-  "https://api.leadconnectorhq.com/widget/bookings/fixai-strategy-consultation";
+  "https://cal.com/sama/a.i-ads-setter-discovery";
 
 
